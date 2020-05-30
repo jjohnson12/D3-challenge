@@ -34,7 +34,7 @@ d3.csv("assets/data/data.csv")
 censusData.forEach(function(data) {
   data.healthcare = +data.healthcare;
   data.poverty = +data.poverty;
-  data.abr = data.abr;
+  data.abbr = data.abbr;
 });
 
 //Create the scales 
@@ -76,7 +76,7 @@ let yLinearScale = d3.scaleLinear()
       .data(censusData)
       .enter()
       .append("text")
-      .text(d => d.abr)
+      .text(d => d.abbr)
       .attr("x", d => xLinearScale(d.poverty))
       .attr("y", d => yLinearScale(d.healthcare))
       .attr("dy",-395)

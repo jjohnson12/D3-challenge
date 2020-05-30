@@ -34,7 +34,7 @@ d3.csv("assets/data/data.csv")
 censusData.forEach(function(data) {
   data.healthcare = +data.healthcare;
   data.poverty = +data.poverty;
-  data.abr = data.abbr;
+  data.abbr = data.abbr;
 });
 
 //Create the scales 
